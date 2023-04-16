@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.google.com/specimen/Courier+Prime?query=Courier" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <title>JS Challenge: DOM, CONDITIONALS, LOGIC</title>
+</head>
+
+<body>
+    <label for="input-field">Hi! Here you can enter some text)</label>
+    <input type="text" id="input-field">
+    <button onclick="checkText()">Check Text</button>
+    <script>
+        function checkText() {
+            const input = document.getElementById("input-field").value;
+            if (input.trim() === "") {
+                alert("error: input is empty");
+            } else if (input.includes("hello")) {
+                document.body.style.backgroundColor = "#065A82"
+            } else if (input.includes("world")) {
+                document.body.style.backgroundColor = "#415D43";
+            } else if (input.includes("back")) {
+                document.body.style.backgroundColor = "#C0BCB5";
+            } else {
+                document.body.style.backgroundColor = "#6D0300";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
